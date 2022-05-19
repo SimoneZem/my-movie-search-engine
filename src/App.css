@@ -11,14 +11,17 @@
   justify-content: space-around;
   align-items: center;
   background-color: rgb(236, 194, 194);
+  margin-bottom: 150px;
 }
 
-.links {
-  display: flex;
-  justify-content: space-between;
-  list-style: none;
-  width: 15%;
-  padding-left: 1200px;
+.title {
+  margin-right: 1300px;
+}
+
+.link {
+  display: block;
+  color: white;
+  text-decoration: none;
 }
 
 .App-logo {
@@ -39,6 +42,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  margin-top: -150px;
 }
 
 .App-link {
