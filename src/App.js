@@ -4,9 +4,9 @@ import React from "react";
 import About from "./components/About";
 import Home from "./components/Home";
 import Contacts from "./components/Contacts";
-import Navbar from "./components/Navbar";
+import "./App.css";
 
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import "./App.css";
 
@@ -14,7 +14,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <nav className="navbar">
+          <h2> Routing </h2>
+          <Link to="/"> Home </Link>
+          <Link to="/about"> About </Link>
+          <Link to="/contacts"> Contacts </Link>
+        </nav>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
