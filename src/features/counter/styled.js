@@ -27,6 +27,7 @@ export const DisplayCounter = styled.span`
   padding-right: 16px;
   margin-top: 2px;
   font-family: Arial;
+  border: 1px solid purple;
 `;
 
 export const Input = styled.input`
