@@ -79,7 +79,7 @@ BrowserRouter :  E' un componente che utilizzeremo per comprendere tutti i diver
 /* Link :        Il componente link serve per creare collegamenti [ ciò che in HTML avremmo con <a></a>].
                  Se ad esempio volessimo creare una navbar con gli degli elementi cliccabili che ci
                  riportano a una delle pagine nella nostra app andremmo ad usare esattamente Link.
-                 La sintassi corretta è <Link className="link" to="/"> Comp </Link> 
+                 La sintassi corretta è <Link  to="/"> Comp </Link> 
                  la props "to" altro non è che un un percorso su cui verremo instradati al click 
 */
 
