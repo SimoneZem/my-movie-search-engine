@@ -56,12 +56,13 @@ BrowserRouter :  E' un componente che utilizzeremo per comprendere tutti i diver
                  nell'applicazione che esisterà all'interno del Router.
                  Andremo a mettere gli elementi che voglio facciano parte della navigazione all'interno di 
                  BrowserRouter. La prima cosa da fare sarà includere nel return <Router></Router>. 
-                 All'interno di Routes, in poche parole, avremo i percorsi che determineranno dove 
-                 andrà l'utente ;
-*/
+                 
 
 /* Routes :      Routes sostanzialmente è un componente 
                  che determinerà dove, nel nostro sistema, andremo ad avere i percorsi.
+                 All'interno di Routes, in poche parole, avremo i percorsi che determineranno dove 
+                 andrà l'utente ;
+
 
                  <Router>
                     <Routes></Routes>
