@@ -84,8 +84,8 @@ BrowserRouter :  E' un componente che utilizzeremo per comprendere tutti i diver
 */
 
 /* NB :          A prescindere dalla pagina in cui ci troviamo, la navbar verrà visualizzata sempre.
-                 Questo perchè tutto ciò andremo a visualizzare nella nostra app si che troverà all'interno di 
-                 Router, ma al di fuori di Routes sarà visionabile all'interno di qualsiasi pagina.
+                 Questo perchè tutto ciò andremo a visualizzare nella nostra app che si troverà all'interno di 
+                 Router, ma al di fuori di Routes, sarà visibile all'interno di qualsiasi pagina.
                  L'unica cosa che cambierà si troverà all'interno di Routes.
  
 */
