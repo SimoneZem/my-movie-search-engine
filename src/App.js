@@ -1,50 +1,87 @@
 import React from "react";
 import { useEffect } from "react";
-import logo from "./logo.svg";
-import { Counter } from "./features/counter/Counter";
-import About from "./components/About";
-import Home from "./components/Home";
-import Contacts from "./components/Contacts";
+import About from "./components/About/About";
+import Home from "./components/Home/Home";
+import Contacts from "./components/Contacts/Contacts";
 import "./App.css";
-
+import CustomButton from "./components/CustomButton/CustomButton";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 import "./App.css";
+import {
+  Column,
+  LogoColumn,
+  NavColumn,
+  Navigation,
+  NavigationBar,
+  Row,
+  Wrapper,
+} from "./styled";
+
+const directing1 = <Link to="/">Home</Link>;
+const directing2 = <Link to="/about">About</Link>;
+const directing3 = <Link to="/contacts">Contacts</Link>;
 
 function App() {
-  useEffect(() => {
-    console.log("Run Right Now");
-    alert("Welcome Simone");
-  }, []);
+  // useEffect(() => {
+  //   console.log("Run Right Now");
+  //   alert("Welcome Simone");
+  // }, []);
 
   return (
     <Router>
-      <div className="App">
-        <nav className="navbar">
-          <h2 className="title"> Routing </h2>
-          <Link className="link" to="/">
-            {" "}
-            Home{" "}
-          </Link>
-          <Link className="link" to="/about">
-            {" "}
-            About{" "}
-          </Link>
-          <Link className="link" to="/contacts">
-            {" "}
-            Contacts{" "}
-          </Link>
-        </nav>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contacts" element={<Contacts />} />
-        </Routes>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Counter />
-        </header>
-      </div>
+      <Wrapper>
+        <Navigation>
+          <NavigationBar>
+            <Row>
+              <Column>
+                <LogoColumn>
+                  <CustomButton btnText={"Home Cinema"} />
+                  <CustomButton btnText={"Serie TV"} />
+                </LogoColumn>
+              </Column>
+
+              <Column>
+                <NavColumn>
+                  {/* <CustomButton
+                    as={Link}
+                    to="/"
+                    btnText={"Home"}
+                  ></CustomButton>
+
+                  <Link to="/">
+                    <CustomButton>
+                      <p>Home</p>
+                    </CustomButton>
+                  </Link> */}
+
+                  {/* <Link className="link" to="/">
+                    {" "}
+                    Home{" "}
+                  </Link>
+                  <Link className="link" to="/about">
+                    {" "}
+                    About{" "}
+                  </Link>
+                  <Link className="link" to="/contacts">
+                    {" "}
+                    Contacts{" "}
+                  </Link> */}
+
+                  <CustomButton btnText={directing1} />
+                  <CustomButton btnText={directing2} />
+                  <CustomButton btnText={directing3} />
+                </NavColumn>
+              </Column>
+            </Row>
+          </NavigationBar>
+
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contacts" element={<Contacts />} />
+          </Routes>
+        </Navigation>
+      </Wrapper>
     </Router>
   );
 }
