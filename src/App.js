@@ -126,3 +126,12 @@ BrowserRouter :  E' un componente che utilizzeremo per comprendere tutti i diver
                  L'unica cosa che cambierà si troverà all'interno di Routes.
  
 */
+
+/* Path / Exact Path : 
+
+                  <Switch>
+                     <Route path="/users" component={Users} />
+                     <Route path="/users/create" component={CreateUser} />
+                  </Switch>
+
+*/
