@@ -41,5 +41,4 @@ export const NavColumn = styled.nav`
   height: 100%;
   font-size: 22px;
   justify-content: right;
-  padding: 0px 40px;
 `;

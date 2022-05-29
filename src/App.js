@@ -129,9 +129,17 @@ BrowserRouter :  E' un componente che utilizzeremo per comprendere tutti i diver
 
 /* Path / Exact Path : 
 
+                  Il parametro exact entra in gioco quando habbiamo più percorsi con nomi simili
+
                   <Switch>
                      <Route path="/users" component={Users} />
                      <Route path="/users/create" component={CreateUser} />
                   </Switch>
+
+                  Immaginando di avere un componente Users che mostra un elenco di utenti e
+                  un componente CreateUser che viene utilizzato per creare utenti. 
+                  L'URL per CreateUsers deve essere nidificato in Utenti
+
+                  Se true, corrisponderà solo se il percorso corrisponde esattamente a location.pathname.
 
 */
