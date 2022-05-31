@@ -1,31 +1,23 @@
 import React from "react";
-import { useEffect } from "react";
+
 import About from "../About/About";
 import Home from "../Home/Home";
 import Contacts from "../Contacts/Contacts";
 import "./App.css";
 import CustomButton from "../CustomButton/CustomButton";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Column,
+  List,
   LogoColumn,
-  NavColumn,
   Navigation,
   NavigationBar,
   Row,
+  Unordered,
   Wrapper,
 } from "./styled";
 
-const directing1 = <Link to="/">Home</Link>;
-const directing2 = <Link to="/about">About</Link>;
-const directing3 = <Link to="/contacts">Contacts</Link>;
-
 export const Navbar = () => {
-  // useEffect(() => {
-  //   console.log("Run Right Now");
-  //   alert("Welcome Simone");
-  // }, []);
-
   return (
     <Router>
       <Wrapper>
@@ -40,36 +32,19 @@ export const Navbar = () => {
               </Column>
 
               <Column>
-                <NavColumn>
-                  {/* <CustomButton
-                    as={Link}
-                    to="/"
-                    btnText={"Home"}
-                  ></CustomButton>
+                <Unordered>
+                  <List>
+                    <CustomButton btnText="Home" isLink url={"/"} />
+                  </List>
 
-                  <Link to="/">
-                    <CustomButton>
-                      <p>Home</p>
-                    </CustomButton>
-                  </Link> */}
+                  <List>
+                    <CustomButton btnText="About" isLink url={"/about"} />
+                  </List>
 
-                  {/* <Link className="link" to="/">
-                    {" "}
-                    Home{" "}
-                  </Link>
-                  <Link className="link" to="/about">
-                    {" "}
-                    About{" "}
-                  </Link>
-                  <Link className="link" to="/contacts">
-                    {" "}
-                    Contacts{" "}
-                  </Link> */}
-
-                  <CustomButton btnText={directing1} />
-                  <CustomButton btnText={directing2} />
-                  <CustomButton btnText={directing3} />
-                </NavColumn>
+                  <List>
+                    <CustomButton btnText="Contacts" isLink url={"/contacts"} />
+                  </List>
+                </Unordered>
               </Column>
             </Row>
           </NavigationBar>

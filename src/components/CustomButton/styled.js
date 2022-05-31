@@ -1,13 +1,11 @@
 import styled from "styled-components";
 
 export const Btn = styled.button`
-  margin: 10px;
-  display: block;
+  margin: 5px;
   cursor: pointer;
   text-align: center;
-  width: fit-content;
-  appearance: none;
   background-color: transparent;
   font-size: 22px;
   border: none;
+  text-decoration: none;
 `;

@@ -7,9 +7,10 @@ export const Wrapper = styled.div`
 `;
 
 export const NavigationBar = styled.div`
-  height: 18vh;
   background-color: rgb(155, 40, 50);
   margin-bottom: 45px;
+  border: 2px solid yellow;
+  
   
 }
 `;
@@ -21,7 +22,7 @@ export const Navigation = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  height: 15vh;
+  border: 1px solid blue;
 `;
 
 export const Column = styled.div`
@@ -36,9 +37,18 @@ export const LogoColumn = styled.div`
   height: 100%;
 `;
 
-export const NavColumn = styled.nav`
-  display: flex;
+export const List = styled.li`
+  display: block;
   height: 100%;
-  font-size: 22px;
+
+  list-style: none;
+`;
+
+export const Unordered = styled.ul`
+  display: flex;
+  align-items: center;
   justify-content: right;
+
+  font-size: 28px;
+  margin-right: 15px;
 `;
