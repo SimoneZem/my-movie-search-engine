@@ -1,9 +1,13 @@
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
+import CustomButton from "../CustomButton/CustomButton";
 import Axios from "axios";
+import { CallWrapper, DataPoint } from "./styled";
 
 function About() {
   const [data, setData] = useState([]);
+  useEffect(() => {
+    getData();
+  }, []);
 
   const getData = () => {
     Axios.get("https://jsonplaceholder.typicode.com/posts/1").then(
@@ -11,8 +15,11 @@ function About() {
         // console.log(response);
         setData(
           response.data.body +
+            "||...||...||" +
             response.data.id +
+            "||...||...||" +
             response.data.title +
+            "||...||...||" +
             response.data.userId
         );
       }
@@ -20,13 +27,18 @@ function About() {
   };
 
   return (
-    <div>
+    <CallWrapper>
       <b>This is the About Page</b>
-      <p>
-        <button onClick={getData}>Get Data</button>
-      </p>
-      <p>{data}</p>
-    </div>
+      <DataPoint>
+        <CustomButton btnText={"Get Data"} onClick={getData} />
+      </DataPoint>
+      {/* <DataPoint>
+      {data.map((text) => (
+        <div>{text.body}</div>
+      ))}
+    </DataPoint> */}
+      <DataPoint>{data}</DataPoint>
+    </CallWrapper>
   );
 }
 
