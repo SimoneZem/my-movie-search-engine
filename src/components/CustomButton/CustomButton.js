@@ -6,6 +6,7 @@ export const CustomButton = ({ btnText, onClick, isLink, url }) => {
   return (
     <>
       {isLink && <Link to={url}>{btnText}</Link>}
+
       {!isLink && <Btn onClick={onClick}> {btnText} </Btn>}
     </>
   );
@@ -23,3 +24,5 @@ export default CustomButton;
       }
     </>
     */
+
+//isLink = true renderizzi quello che c'è a destra

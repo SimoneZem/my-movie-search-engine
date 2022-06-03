@@ -5,6 +5,7 @@ import { CallWrapper, DataPoint } from "./styled";
 
 function About() {
   const [data, setData] = useState([]);
+  console.log(">>>> ~ file: About.js ~ line 8 ~ About ~ data", data);
   useEffect(() => {
     getData();
   }, []);
@@ -12,16 +13,8 @@ function About() {
   const getData = () => {
     Axios.get("https://jsonplaceholder.typicode.com/posts/1").then(
       (response) => {
-        // console.log(response);
-        setData(
-          response.data.body +
-            "||...||...||" +
-            response.data.id +
-            "||...||...||" +
-            response.data.title +
-            "||...||...||" +
-            response.data.userId
-        );
+        console.log(response);
+        setData(response.data);
       }
     );
   };
@@ -37,7 +30,6 @@ function About() {
         <div>{text.body}</div>
       ))}
     </DataPoint> */}
-      <DataPoint>{data}</DataPoint>
     </CallWrapper>
   );
 }
