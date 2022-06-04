@@ -1,5 +1,7 @@
 import React from "react";
-
+import Nuovi from "../Nuovi/index";
+import SerieTv from "../SerieTv/index";
+import LaMiaLista from "../LaMiaLista/index";
 import About from "../About/About";
 import Home from "../Home/Home";
 import Contacts from "../Contacts/Contacts";
@@ -8,15 +10,14 @@ import CustomButton from "../CustomButton/CustomButton";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Column,
-  List,
   LogoColumn,
   Navcolumn,
   Navigation,
   NavigationBar,
   Row,
-  Unordered,
   Wrapper,
 } from "./styled";
+import Logo from "../Logo";
 
 export const Navbar = () => {
   return (
@@ -27,32 +28,33 @@ export const Navbar = () => {
             <Row>
               <Column>
                 <LogoColumn>
-                  <CustomButton btnText={"Home Cinema"} />
-                  <CustomButton btnText={"Serie TV"} />
+                  <Logo />
+                  <CustomButton btnText="Nuovi" isLink url={"/nuovi"} />
+                  <CustomButton btnText="Serie TV" isLink url={"/serieTv"} />
+                  <CustomButton
+                    btnText="La mia lista"
+                    isLink
+                    url={"/laMiaLista"}
+                  />
                 </LogoColumn>
               </Column>
 
               <Column>
                 <Navcolumn>
-                  {/* <Unordered> */}
-                  {/* <List> */}
                   <CustomButton btnText="Home" isLink url={"/"} />
-                  {/* </List> */}
 
-                  {/* <List> */}
                   <CustomButton btnText="About" isLink url={"/about"} />
-                  {/* </List> */}
 
-                  {/* <List> */}
                   <CustomButton btnText="Contacts" isLink url={"/contacts"} />
-                  {/* </List> */}
-                  {/* </Unordered> */}
                 </Navcolumn>
               </Column>
             </Row>
           </NavigationBar>
 
           <Routes>
+            <Route path="/nuovi" element={<Nuovi />} />
+            <Route path="/serieTv" element={<SerieTv />} />
+            <Route path="/laMiaLista" element={<LaMiaLista />} />
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contacts" element={<Contacts />} />

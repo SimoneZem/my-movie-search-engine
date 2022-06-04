@@ -2,17 +2,14 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   text-align: center;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
 `;
 
 export const NavigationBar = styled.div`
-  background-color: rgb(155, 40, 50);
+  background-color: rgb(75, 35, 149);
   margin-bottom: 45px;
-  
   height: 10vh;
-  
-  
+
 }
 `;
 
@@ -23,7 +20,6 @@ export const Navigation = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-
   height: 10vh;
 `;
 
@@ -40,7 +36,7 @@ export const LogoColumn = styled.div`
 `;
 
 export const Navcolumn = styled.div`
-  justify-content: space-evenly;
+  justify-content: right;
   display: flex;
 `;
 
