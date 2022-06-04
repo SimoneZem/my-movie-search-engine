@@ -9,7 +9,8 @@ export const Wrapper = styled.div`
 export const NavigationBar = styled.div`
   background-color: rgb(155, 40, 50);
   margin-bottom: 45px;
-  border: 2px solid yellow;
+  
+  height: 10vh;
   
   
 }
@@ -22,7 +23,8 @@ export const Navigation = styled.div`
 export const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid blue;
+
+  height: 10vh;
 `;
 
 export const Column = styled.div`
@@ -37,18 +39,23 @@ export const LogoColumn = styled.div`
   height: 100%;
 `;
 
-export const List = styled.li`
-  display: block;
-  height: 100%;
-
-  list-style: none;
-`;
-
-export const Unordered = styled.ul`
+export const Navcolumn = styled.div`
+  justify-content: space-evenly;
   display: flex;
-  align-items: center;
-  justify-content: right;
-
-  font-size: 28px;
-  margin-right: 15px;
 `;
+
+// export const List = styled.li`
+//   display: block;
+//   height: 100%;
+
+//   list-style: none;
+// `;
+
+// export const Unordered = styled.ul`
+//   display: flex;
+//   align-items: center;
+//   justify-content: right;
+
+//   font-size: 28px;
+//   margin-right: 15px;
+// `;

@@ -10,6 +10,7 @@ import {
   Column,
   List,
   LogoColumn,
+  Navcolumn,
   Navigation,
   NavigationBar,
   Row,
@@ -32,19 +33,21 @@ export const Navbar = () => {
               </Column>
 
               <Column>
-                <Unordered>
-                  <List>
-                    <CustomButton btnText="Home" isLink url={"/"} />
-                  </List>
+                <Navcolumn>
+                  {/* <Unordered> */}
+                  {/* <List> */}
+                  <CustomButton btnText="Home" isLink url={"/"} />
+                  {/* </List> */}
 
-                  <List>
-                    <CustomButton btnText="About" isLink url={"/about"} />
-                  </List>
+                  {/* <List> */}
+                  <CustomButton btnText="About" isLink url={"/about"} />
+                  {/* </List> */}
 
-                  <List>
-                    <CustomButton btnText="Contacts" isLink url={"/contacts"} />
-                  </List>
-                </Unordered>
+                  {/* <List> */}
+                  <CustomButton btnText="Contacts" isLink url={"/contacts"} />
+                  {/* </List> */}
+                  {/* </Unordered> */}
+                </Navcolumn>
               </Column>
             </Row>
           </NavigationBar>

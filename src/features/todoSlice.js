@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 const axios = require("axios");
 const API_URL = "https://jsonplaceholder.typicode.com/todos";
 
