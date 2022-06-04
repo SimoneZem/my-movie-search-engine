@@ -1,34 +1,23 @@
-import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { getTodoAsync, addTodoAsync, showTodo } from "../../features/todoSlice";
+import { getTodoAsync, showTodo } from "../../features/todoSlice";
+import { Wrapper } from "../Navbar/styled";
+import { HomeTitle, Request, RequestButton } from "./styled";
 
 export default function Home() {
   const todo = useSelector(showTodo);
   const dispatch = useDispatch();
-  const [newTodo, setNewTodo] = useState({
-    userId: 69,
-    id: 69,
-    title: "",
-    completed: false,
-  });
 
-  const addNewTodo = () => {
-    dispatch(addTodoAsync(newTodo));
-  };
+  const myRequest = () => dispatch(getTodoAsync("2"));
 
   return (
-    <div>
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <input
-        onChange={(e) => setNewTodo({ ...newTodo, title: e.target.value })}
-      />
-      <button onClick={addNewTodo}>Add new todo</button>
+    <Wrapper>
+      <HomeTitle>Axios Call</HomeTitle>
+
       {todo.map((item) => {
-        return <p key={item.id}>{item.title}</p>;
+        return <Request key={item}>{item.title}</Request>;
       })}
-      <button onClick={() => dispatch(getTodoAsync())}>GET TODO</button>
-    </div>
+      <RequestButton onClick={myRequest}>GET DATA</RequestButton>
+    </Wrapper>
   );
 }
 
@@ -41,7 +30,7 @@ export default function Home() {
 //   }, []);
 
 //   const getData = async () => {
-//     await fetch("https://jsonplaceholder.typicode.com/posts/1")
+//     await fetch("https://jsonplaceholder.typicode.com/todos")
 //       .then((response) => response.json())
 //       .then((json) => console.log(json));
 //   };

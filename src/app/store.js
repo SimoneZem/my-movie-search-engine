@@ -4,6 +4,6 @@ import todoSlide from "../features/todoSlice";
 export const store = configureStore({
   initialState: {},
   reducer: {
-    counter: todoSlide,
+    todo: todoSlide,
   },
 });

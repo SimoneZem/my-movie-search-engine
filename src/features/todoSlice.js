@@ -5,7 +5,7 @@ const API_URL = "https://jsonplaceholder.typicode.com/todos";
 export const todoSlide = createSlice({
   name: "todo",
   initialState: {
-    data: [],
+    data: [""],
   },
   reducers: {
     addTodo: (state, action) => {
