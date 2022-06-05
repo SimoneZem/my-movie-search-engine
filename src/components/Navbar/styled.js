@@ -2,19 +2,17 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   text-align: center;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const NavigationBar = styled.div`
   background-color: rgb(75, 35, 149);
-  margin-bottom: 45px;
-  height: 10vh;
-
 }
 `;
 
 export const Navigation = styled.div`
   overflow: scroll;
+  border: 2px solid black;
 `;
 
 export const Row = styled.div`
@@ -28,6 +26,8 @@ export const Column = styled.div`
   flex-direction: column;
   flex-basis: 100%;
   flex: 1;
+  height: 10vh;
+  border: 2px solid green;
 `;
 
 export const LogoColumn = styled.div`
@@ -38,20 +38,6 @@ export const LogoColumn = styled.div`
 export const Navcolumn = styled.div`
   justify-content: right;
   display: flex;
+  height: 100%;
+  border: 2px solid yellow;
 `;
-
-// export const List = styled.li`
-//   display: block;
-//   height: 100%;
-
-//   list-style: none;
-// `;
-
-// export const Unordered = styled.ul`
-//   display: flex;
-//   align-items: center;
-//   justify-content: right;
-
-//   font-size: 28px;
-//   margin-right: 15px;
-// `;

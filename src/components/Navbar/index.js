@@ -28,7 +28,7 @@ export const Navbar = () => {
             <Row>
               <Column>
                 <LogoColumn>
-                  <Logo />
+                  {/* <Logo /> */}
                   <CustomButton btnText="Nuovi" isLink url={"/nuovi"} />
                   <CustomButton btnText="Serie TV" isLink url={"/serieTv"} />
                   <CustomButton
