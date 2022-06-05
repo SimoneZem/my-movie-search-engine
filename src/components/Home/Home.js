@@ -4,19 +4,13 @@ import { Wrapper } from "../Navbar/styled";
 import { HomeTitle, Request, RequestButton } from "./styled";
 
 export default function Home() {
-  const todo = useSelector(showTodo);
   const dispatch = useDispatch();
-
-  const myRequest = () => dispatch(getTodoAsync("2"));
 
   return (
     <Wrapper>
       <HomeTitle>Axios Call</HomeTitle>
 
-      {todo.map((item) => {
-        return <Request key={item}>{item.title}</Request>;
-      })}
-      <RequestButton onClick={myRequest}>GET DATA</RequestButton>
+      <RequestButton>GET DATA</RequestButton>
     </Wrapper>
   );
 }

@@ -1,6 +1,18 @@
-import React from "react";
-import { Title } from "../Contacts/styled";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getPosts } from "../../app/slice";
 
-export default function Nuovi() {
-  return <Title>Nuove uscite</Title>;
+function Nuovi() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts());
+  }, []);
+
+  return (
+    <div className="wrapper">
+      <h1>Ciao</h1>
+    </div>
+  );
 }
+
+export default Nuovi;
