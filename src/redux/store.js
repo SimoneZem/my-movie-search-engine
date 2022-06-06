@@ -1,19 +1,9 @@
-// import { configureStore } from "@reduxjs/toolkit";
-// import todoSlide from "../features/todoSlice";
-
-// export const store = configureStore({
-//   initialState: {},
-//   reducer: {
-//     todo: todoSlide,
-//   },
-// });
-
 import saga from "redux-saga";
 import { all, fork } from "redux-saga/effects";
 
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 
-import { watchCommonSaga } from "../app/sagas";
+import { watchCommonSaga } from "../redux/sagas";
 import RootReducer from "./slice";
 
 function* RootSaga() {

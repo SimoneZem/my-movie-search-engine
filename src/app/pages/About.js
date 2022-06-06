@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import CustomButton from "../CustomButton/CustomButton";
+
 import Axios from "axios";
-import { CallWrapper, DataPoint } from "./styled";
 
 function About() {
   const [data, setData] = useState([]);
@@ -20,17 +19,12 @@ function About() {
   };
 
   return (
-    <CallWrapper>
+    <div>
       <b>This is the About Page</b>
-      <DataPoint>
-        <CustomButton btnText={"Get Data"} onClick={getData} />
-      </DataPoint>
-      {/* <DataPoint>
-      {data.map((text) => (
-        <div>{text.body}</div>
-      ))}
-    </DataPoint> */}
-    </CallWrapper>
+      <div>
+        <button onClick={getData}>Get Data</button>
+      </div>
+    </div>
   );
 }
 

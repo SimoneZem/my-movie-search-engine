@@ -18,16 +18,3 @@ export const CustomButton = ({ btnText, onClick, isLink, url }) => {
 };
 
 export default CustomButton;
-
-/*
-      <>
-      {
-        <Btn onClick={onClick}>
-          {" "}
-          {btnText} {isLink && <Link to={url}>{btnText}</Link>}{" "}
-        </Btn>
-      }
-    </>
-    */
-
-//isLink = true renderizzi quello che c'è a destra

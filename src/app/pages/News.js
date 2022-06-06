@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getPosts } from "../../app/slice";
+import { getPosts } from "../../redux/slice";
 
-function Nuovi() {
+function News() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts());
@@ -15,4 +15,4 @@ function Nuovi() {
   );
 }
 
-export default Nuovi;
+export default News;
